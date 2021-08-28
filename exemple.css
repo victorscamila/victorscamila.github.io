@@ -1,0 +1,31 @@
+.ex {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+
+}
+.ex-card-h {
+    width: 100px;
+    height: 100px;
+    border: 2px solid gray;
+    position: relative;
+}
+.ex-card-h:hover {
+    border-color: #000;
+}
+.ex-animation-block {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: rotate(25deg);
+    transition: 1s;
+}
+.ex-card-h:hover .ex-animation-block{
+    transform: rotate(115deg);
+}
+.ex-1 {
+
+}
