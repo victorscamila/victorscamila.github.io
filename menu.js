@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded',function(){
     close.addEventListener('click',function(){
         document.getElementById("sideMenu").classList.toggle('open')
     })
-    btnSettings.addEventListener('click',function(){
-        var settings = document.getElementById("settings");
-        settings.classList.toggle("active");
-        btnSettings.classList.toggle("active");
-    })
+    // btnSettings.addEventListener('click',function(){
+    //     var settings = document.getElementById("settings");
+    //     settings.classList.toggle("active");
+    //     btnSettings.classList.toggle("active");
+    // })
     let btnDrop = document.getElementsByClassName('part__head')
     btnDrop = [...btnDrop]
     btnDrop.forEach(element => {

@@ -1,9 +1,11 @@
+$exemple: cyan;
 body {
     font-family: sans-serif;
     margin: 0;
     line-height: normal;
     padding-bottom: 200px;
 }
+
 .aaa {
     background-color: yellow!important;
 }
@@ -13,17 +15,32 @@ body {
     max-width: 1500px;
     padding-right: 298px;
     padding-left: 40px;
+    transition: 0.2s;
+}
+img {
+    max-width: 100%;
 }
 section {
     position: relative;
-    &:before {
-        content: '';
-        width: 100%;
-        border-top: 1px solid lightgray;
-        margin-top: -10px;
-        display: block;
-        position: absolute;
+    // &:before {
+    //     content: '';
+    //     width: 100%;
+    //     border-top: 1px solid lightgray;
+    //     margin-top: -10px;
+    //     display: block;
+    //     position: absolute;
+    // }
+    > .part {
+        border-top: 4px solid lightgray;
     }
+}
+.key {
+    display: inline-block;
+    border: 1px solid gray;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-size: 0.8em;
+    padding: 0.2em;
+    color: #000;
 }
 /* buttons */
 button, .btn {
@@ -31,6 +48,14 @@ button, .btn {
     background-color: transparent;
     text-decoration: none;
     cursor: pointer;
+}
+.btn--ex {
+    background-color: $exemple;
+    border-radius: 30px;
+    padding: 10px;
+    &:hover {
+        border-color: #000;
+    }
 }
 .btn-top, .btn-bottom {
     width: 48px;
@@ -60,15 +85,38 @@ button, .btn {
 .btn-bottom:before {
     transform: rotate(180deg);
 }
+.title-play {
+    margin-bottom: 19px;
+    margin-top: 23px;
+}
 .btn--close, .btn--config {
+    color: transparent;
     width: 48px;
     height: 48px;
     background-color: lightgray;
     margin-bottom: 10px;
     font-size: 8px;
+    position: relative;
+    background-image: url(img/x.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
 }
 .top-mensage {
-
+    margin-bottom: 30px;
+    &--mob {
+        display: none;
+    }
+    @media (max-width: 767px) {
+        border: 2px solid red;
+        padding: 10px;
+        p {
+            display: none;
+        }
+        &--mob{
+            display: block;
+        }
+    }
 }
 
 .side-nav {
@@ -76,10 +124,49 @@ button, .btn {
     right: 10px;
     top: 10px;
     transition: 0.2s;
-    height: 100%;
+    height: auto;
     display: flex;
+    bottom: 10px;
     &:not(.open){
-        right: -200px;
+        right: -216cd p px;
+        + .page-content {
+            padding-right: 78px;
+        }
+        .btn--close {
+            background-image: url(img/list.svg);
+        }
+    }
+    ol {
+        padding: 0px;
+        list-style: none;
+        li {
+            margin-top: 16px;
+            li {
+                margin-top: 6px;
+                font-size: .9em;
+            }
+        }
+        ol {
+            padding-left: 10px;
+        }
+        a {
+            display: block;
+            color: #000;
+            text-decoration: underline;
+            text-underline-position: under;
+            @media (hover: hover){
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                    text-underline-position: under;
+                }
+            }
+        }
+    }
+    h2 {
+        font-size: 1.3rem;
+        margin: 0;
+        text-align: center;
     }
     &__menu {
         height: 100%;
@@ -89,8 +176,9 @@ button, .btn {
         margin-right: 10px;
     }
     &__content {
-        overflow: hidden;
-        width: 200px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 215px;
         height: 100%;
         /* margin: 0 10px; */
         position: relative;
@@ -116,9 +204,24 @@ button, .btn {
 }
 
 .part {
-    margin-top: 40px;
+    margin-top: 28px;
+    border-right: 4px solid lightgray;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    padding: 0 6px 4px 0;
     .part {
         margin-top: 20px;
+        &:target:before {
+            content: '';
+            display: block;
+            position: absolute;
+            border: 10px solid transparent;
+            
+            left: -5px;
+            opacity: 0;
+            top: 50%;
+            animation: flash 2s;
+        }
     }
     *:first-child {
         margin-top: 0;
@@ -158,11 +261,16 @@ button, .btn {
             &:hover:after {
                 opacity: 1;
             }
-
         }
         &:not(.open) + .part__content {
             height: 0;
             margin-top: 0px;
+            margin-top: -35px;
+            margin-bottom: 35px;
+            // opacity: 0;
+            .part:target:before {
+                border-bottom-color: #000;
+            }
         }
     }
     &__content {
@@ -173,10 +281,19 @@ button, .btn {
         margin-top: 16px;
     }
 }
+// .target-alert {
+//     border: 8px solid transparent;
+//     border-bottom-color: red;
+//     position: absolute;
+//     bottom: 0px;
+//     opacity: 0;
+// }
+
 .play {
     display: flex;
     padding: 10px;
     background-color: rgb(202, 202, 202);
+    position: relative;
     &__show {
         flex-grow: 1;
         /* min-height: 300px; */
@@ -242,3 +359,9 @@ button, .btn {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+@keyframes flash {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+  }

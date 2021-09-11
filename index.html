@@ -6,48 +6,99 @@
     
 <title>Pg</title>
     
+<link rel="stylesheet" href="splide.min.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="play__content.css">
 <link rel="stylesheet" href="exemple.css">
-
-<link rel="stylesheet" href="splide.min.css">
-
 </head>
-
 
 <body>
     <div class="side-nav open" id="sideMenu">
         <div class="side-nav__menu">
-            <button class="btn--close">Fechar</button>
-            <button class="btn--config" id="settingsBtn">Configurações</button>
+            <button class="btn--close">Fechar/abrir sumario</button>
+            <!-- <button class="btn--config" id="settingsBtn">Configurações</button> -->
         </div>
         <div class="side-nav__content">
             <div class="side-nav__aba active" id="navLinks">
-                <ul>
-                    <li>Titulo</li>
-                    <li>
-                        <a href="#geral">Geral</a>
-                        <ul>
+                <h2>Sumario</h2>
+                
+                    <!-- <li><a href="#titulo1">Direções para produção web design mais clara e controlada</a> -->
+                        <ol>
                             <li>
-                                <a href="#passandoInformação">Passando informação</a>
+                                <a href="#geral">Geral</a>
+                                <ol>
+                                    <li>
+                                        <a href="#passandoInformação">Passando informação</a>
+                                    </li>
+                                    <li><a href="#largura">Largura</a></li>
+                                    <li><a href="#conteudo">Conteúdo</a></li>
+                                    <li><a href="#elementosMutaveis">Elementos mutáveis</a></li>
+                                    <li><a href="#unidades">Principais unidades</a></li>
+                                </ol>
                             </li>
-                            <li></li>
-                        </ul>
-                    </li>
-                </ul>
-    
+                            <li><a href="#grid">Grid</a>
+                                <ol>
+                                    <li><a href="#numeroDeColunas">Número de colunas</a></li>
+                                    <li><a href="#maxContainer">Tamanho do container</a></li>
+                                    <li><a href="#calha">Calha</a></li>
+                                    <li><a href="#margemExterna">Margem min externa</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#posicionamento">Posicionamento</a>
+                                <ol>
+                                    <li><a href="#estatica">Estática</a></li>
+                                    <li><a href="#absoluta">Absoluta</a></li>
+                                    <li><a href="#fixa">Fixa</a></li>
+                                    <li><a href="#sticky">Pegajoso Sticky</a></li>
+                                    <li><a href="#positionsTest">Teste os posicionamentos</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#blocos">Blocos</a>
+                                <ol>
+                                    <li><a href="#blocoFalta">Falta de um elemento</a></li>
+                                    <li><a href="#blocoTamanho">Tamanho mínimo e máximo</a></li>
+                                    <li><a href="#blocoAlinhamento">Alinhamento</a></li>
+                                    <li><a href="#elementosTransitivos">Elementos transitivos</a>
+                                </ol>
+                            </li>
+                            </li>
+                            <li><a href="#texto">Texto</a>
+                                <ol>
+                                    <li><a href="#blocoTexto">Bloco de texto</a></li>
+                                    <li><a href="#p-text">Teste o limite de linhas</a></li>
+                                    <li><a href="#linha">Linha do texto</a></li>
+                                    <li><a href="#elementosTexto">Elementos de texto</a></li>
+                                    <li><a href="#p-text">Teste a margem do texto</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#imagens">Imagens</a>
+                                <ol>
+                                    <li><a href="#icones">Imagens/Ícones padrão</a></li>
+                                    <li><a href="#imagensTamanho">Tratando tamanho</a></li>
+                                    <li><a href="#p-image">Teste tratamento de tamanho</a></li>
+                                    <li><a href="#p-image-1x1">Teste contenção em tamanho fixo</a></li>
+                                </ol>
+                            </li>
+                        </ol>
             </div>
-            <div class="side-nav__aba" id="settings">
+            <!-- <div class="side-nav__aba" id="settings">
                 configurações
-            </div>
+            </div> -->
         </div>
         
     </div>
  <div class="page-content">
-    <h1>Titulo</h1>
+     <div class="top-mensage">
+        <p>Esse material é melhor visualizado em Chrome ou Firefox</p>
+        <div class="top-mensage--mob">
+            !! Esse material não recomendado para visualização mobile
+        </div>
+     </div>
+    <h1 id="titulo1">Direções para produção web design mais clara e controlada</h1>
     <p>
         Saiba como você quer a sua pagina, e passe para o desenvolvedor.
     </p>
+    <!-- 
     <div class="play play-single">
         <div class="play__options">
             <button type="button" class="class-button play__options__item active" value="empty">item</button>
@@ -59,41 +110,7 @@
             </div>
         </div>
     </div>
-    <br><br>
-    <br><br>
-    <br><br>
-    <div class="play play-single" id="p-carousel">
-        <div class="play__options">
-            <button type="button" class="class-button play__options__item active"  value="empty">Sem limite de altura</button>
-            <button type="button" class="class-button play__options__item " value="carousel-max-w">Com altura maxima do conteudo</button>
-            <button type="button" class="class-button play__options__item " value="carousel-min-w">Com altura minima do conteudo</button>
-            <button type="button" class="class-button play__options__item " value="carousel-fix">Com altura fixa</button>
-        </div>
-        <div class="play__show">
-            <div class="play__show__content">
-                <div class="splide aaa">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <div class="splide__slide ">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                            <div class="splide__slide ">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="box-text m-10">
-                    Exemplo de item externo ao carrossel
-                </div>
-                <div class="box-text m-10">
-                    Exemplo de item externo ao carrossel
-                </div>
-            </div>
-
-        </div>
-    </div>
+     -->
     <!-- <section>
         <div class="part">
             <button type="button" class="part__head open">
@@ -105,16 +122,16 @@
 
     <!-- Geral -->
     <section>
-        <div class="part">
+        <div class="part" id="geral">
             <button type="button" class="part__head open">
-                <h2 id="geral">
+                <h2>
                     Geral
                 </h2>
             </button>
             <div class="part__content">
-                <div class="part">
+                <div class="part" id="passandoInformação">
                     <button type="button" class="part__head open">
-                        <h3 id="passandoInformação">
+                        <h3>
                             Passando informação
                         </h3>
                     </button>
@@ -138,9 +155,10 @@
                         </p>
                     </div>
                 </div>
-                <div class="part">
+                <!-- largura -->
+                <div class="part" id="largura">
                     <button type="button" class="part__head open">
-                        <h3 id="largura">
+                        <h3>
                             Largura
                         </h3>
                     </button>
@@ -151,42 +169,83 @@
                         <p>
                             Elementos que tem uma altura proporcional a largura são especialmente problemáticos com isso, podendo ser grandes ou pequenos demais dependendo da tela. Teste para saber se há necessidade de uma delimitação de tamanho máximo ou mínimo.
                         </p>
-                        <h3 id="conteudo">
+                    </div>
+                </div>
+                <!-- conteudo -->
+                <div class="part" id="conteudo">
+                    <button type="button" class="part__head open">
+                        <h3>
                             Conteúdo
                         </h3>
+                    </button>
+                    <div class="part__content">
                         <p>
                             O editor pode acabar colocando muito mais ou muito menos caracteres que o esperado, Por algum erro ou alguma informação, elemento ou imagem pode não ser devidamente carregado.
                         </p>
                         <p>
                             Por isso é sempre importante definir limites para conteúdo em excesso &nbsp;ou comportamentos que previnam a falta de conteúdo. Isso também vale para conjunto de elementos, se uma linha tem 3 cards o alinhamento continua o mesmo se for adicionado só dois? Um carrossel com uma imagem se manterá um carrossel?
                         </p>
-                        <h3 id="hover">
-                            Hover
+                    </div>
+                </div>
+                <!-- Elementos mutaveis -->
+                <div class="part" id="elementosMutaveis">
+                    <button type="button" class="part__head open">
+                        <h3>
+                            Elementos Mutáveis
                         </h3>
+                    </button>
+                    <div class="part__content">
+                        <p>
+                            Elementos que ativam uma animação, transição e mudança. Essas informações são passadas melhor de maneira escrita (nota ou tabela com situações) ou com um exemplo muito detalhado (o elemento em funcionamento ou um vídeo com as situações).
+                        </p>
+                        <ul>
+                            <li>
+                                Oque ativa 
+                            </li>
+                            <li>
+                                se é infinito ou limitado
+                            </li>
+                            <li>
+                                como vai funcionar
+                            </li>
+                            <li>
+                                se possível um exemplo
+                            </li>
+                        </ul>
+                        <p>Ex.: O quadrado flutuante a animação é ativada no hover do elemento total, o quadrado deve girar 90º uma vez e voltar ao estado inicial após o hover.</p>
+                        <div class="ex">
+                            <div class="ex-card-h">
+                                <div class="ex-animation-block"></div>
+                            </div>
+                        </div>
+                        <h4 id="hover">
+                            Hover
+                        </h4>
                         <p>
                             Os elementos clicáveis ainda são entendíveis sem o hover.</p>
                         <p>
                             Existem telas de tamanho intermediário, logo o mesmo tamanho de tela pode ser um notebook ou um tablet, Informações que são exibidas em hover podem estar sempre visiveis em em touch ou ter outro comportamento (o desenvolvedor pode resolver especificar isso facilmente)
                         </p>
-                    </div>
-                </div>
-                <div class="part">
-                    <button type="button" class="part__head open">
-                        <h3 id="focus">
+
+                        <h4 id="focus">
                             Focus
-                        </h3>
-                    </button>
-                    <div class="part__content">
+                        </h4>
                         <p>
                             Não peça para remover o focus dos elementos (regularmente um outline em volta do inputs), eles são de extrema importância.</p>
                         <p>
                             Você pode estilizar o focus mas isso fará dele visível após click. Você pode só manter o focus padrão, ele é uma ferramenta prática e só será visto quando necessário.
                         </p>
+                        <p style="margin-bottom: 0;">Ex.: </p>
+                        <input type="text" placeholder="clique para ver o hover" style="margin-right: 10px;" readonly>
+                        <a href="#0" style="margin-right: 10px; ">do input ao lado aperte 
+                            <span class="key">Tab ↹</span> para ver focus nesse link</a>
+                        <button class="btn btn--ex" type="button" style="margin-right: 10px; "><span class="key">Tab ↹</span> denovo para esse botão </button>
                     </div>
                 </div>
-                <div class="part">
+                <!-- unidades -->
+                <div class="part" id="unidades"> 
                     <button type="button" class="part__head open">
-                        <h3 id="unidades">
+                        <h3>
                             Principais Unidades
                         </h3>
                     </button>
@@ -244,9 +303,9 @@
     
     <!-- Grid -->
     <section>
-        <div class="part">
+        <div class="part" id="grid">
             <button type="button" class="part__head open">
-                <h2 id="grid">
+                <h2>
                     Grid    
                 </h2>
             </button>
@@ -256,10 +315,9 @@
                 <p>
                     O grid é o elemento mais importante para responsividade, ele tem que ser pensado para todos os tamanhos de tela. Definir Break points e pensar tamanhos intermediários os tamanhos intermediários não precisam ser exemplificados, mas precisam ser considerados na definição do grid.</p>
                 <p>
-                    “direção” do tamanho, você definiu o grid para um tamanho de tela essas definições servem pra esse tamanho para que intervalo de tamanho de tela</p>
+                    A “direção” do tamanho, que foi definido para o grid para um tamanho de tela, essas definições servem para esse tamanho para que intervalo de tamanho de tela. Basicamente  um tamanho pode ser pra telas igual ou acima daquele tamanho ou telas até aquele tamanho.</p>
                 <p>
-                    <!-- <img alt="" src="images/image4.png" style="width: 604.72px; height: 250.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></p> -->
-            
+                    <img alt="" src="img/largura-telas.png" title="tamanhos de tela e secçoes" alt='Grafico mostrando larguras de tela e marcações 0px, menor que 600px, 600px, maior que 600px e menor que 1200px, 1200px, maior que 1200px e menor que 1800px, 1800px, maior que 1800px'></p>
                 <p>
                     Regularmente o grid é composto</p>
                 <ul>
@@ -276,42 +334,76 @@
                         Margem min externa
                     </li>
                 </ul>
-                <h3 id="numeroDeColunas">
-                    Número de colunas</h3>
-                <p>
-                    O tamanho das colunas é normalmente definido por porcentagem(o número de colunas é o suficiente). Pode ser mantido um tamanho fixo mas isso demanda um Container sempre menor &nbsp;que a tela (oque não funcionará bem mobile).</p>
-                <p>
-                    É importante seguir o Grid no site principalmente na contenção dos elementos, Você pode fazer elementos fora do grid mas esses demandam mais tempo e trabalho além de serem mais difíceis de serem adaptados nos tamanhos de tela intermediários.</p>
-                <h3 id="maxContainer">
-                    Tamanho Máximo do container</h3>
-                <p>
-                    Definir break points, para intervalos de tela.</p>
-                <p>
-                    Se o tamanho máximo do container for menor que o tamanho mínimo do intervalo - margem mínima o container terá 100% da largura logo variará mais.</p>
-                <p>
-                    Container 100% ou menor que tela?</p>
-                <p>
-                    O container &nbsp;menor que a tela dá mais controle ao designer pra elementos que podem ficar grandes ou apertados demais já que há uma grande variação de largura, mas em telas pequenas (desktop ou mobile) a tela 100% proporciona mais espaço.</p>
-                <h3 id="calha">
-                    Calha</h3>
-                <p>
-                    Pode ser um tamanho fixo em pixels, uma porcentagem ou até um porcentagem da tela, normalmente é usado em pixels.</p>
-                <p>
-                    Normalmente no código ela é formada de metade da calha em cada coluna, logo elementos que contam com a calha são complicados de serem implementados.</p>
-                <h3 id="margem externa">
-                    Margem min externa</h3>
-                <p>
-                    &nbsp;esse atributo é mais necessário em casos onde o container ocupa 100% da tela, para definir a distância mínima entre conteúdo e borda, também pode ser usada para páginas onde o conteúdo tem um fundo de cor diferente do fundo do site
-                </p>
+                <div class="part" id="numeroDeColunas">
+                    <button type="button" class="part__head open">
+                        <h3>
+                            Número de colunas</h3>
+                    </button>
+                    <div class="part__content">
+                        <p>
+                            O tamanho das colunas é normalmente definido por porcentagem(o número de colunas é o suficiente). Pode ser mantido um tamanho fixo mas isso demanda um Container sempre menor &nbsp;que a tela (oque não funcionará bem mobile).</p>
+                        <p>
+                            É importante seguir o Grid no site principalmente na contenção dos elementos, Você pode fazer elementos fora do grid mas esses demandam mais tempo e trabalho além de serem mais difíceis de serem adaptados nos tamanhos de tela intermediários.</p>
+                        <h3 id="maxContainer">
+                            Tamanho Máximo do container</h3>
+                        <p>
+                            Definir break points, para intervalos de tela.</p>
+                        <p>
+                            Se o tamanho máximo do container for menor que o tamanho mínimo do intervalo - margem mínima o container terá 100% da largura logo variará mais.</p>
+                        <p>
+                            Container 100% ou menor que tela?</p>
+                        <p>
+                            O container &nbsp;menor que a tela dá mais controle ao designer pra elementos que podem ficar grandes ou apertados demais já que há uma grande variação de largura, mas em telas pequenas (desktop ou mobile) a tela 100% proporciona mais espaço.</p>
+                    </div>
+                </div>
+                <div class="part" id="maxContainer">
+                    <button type="button" class="part__head open">
+                        <h3>
+                            Tamanho do container
+                        </h3>
+                    </button>
+                    <div class="part__content">
+                        <p>
+                            Definir break points, para intervalos de tela.</p>
+                        <p>
+                            Se o tamanho máximo do container for menor que o tamanho mínimo do intervalo - margem mínima o container terá 100% da largura logo variará mais.</p>
+                        <p>
+                            Container 100% ou menor que tela?</p>
+                        <p>
+                            O container &nbsp;menor que a tela dá mais controle ao designer pra elementos que podem ficar grandes ou apertados demais já que há uma grande variação de largura, mas em telas pequenas (desktop ou mobile) a tela 100% proporciona mais espaço.</p>
+                    </div>
+                </div>
+                <div class="part" id="calha">
+                    <button type="button" class="part__head open">
+                        <h3>
+                            Calha</h3>
+                    </button>
+                    <div class="part__content">
+                        <p>
+                            Pode ser um tamanho fixo em pixels, uma porcentagem ou até um porcentagem da tela, normalmente é usado em pixels.</p>
+                        <p>
+                                Normalmente no código ela é formada de metade da calha em cada coluna, logo elementos que contam com a calha são complicados de serem implementados.</p>
+                    </div>
+                </div>
+                <div class="part" id="margemExterna">
+                    <button type="button" class="part__head open">
+                        <h3>Margem min externa</h3>
+                    </button>
+                    <div class="part__content">
+                        <p>
+                            &nbsp;esse atributo é mais necessário em casos onde o container ocupa 100% da tela, para definir a distância mínima entre conteúdo e borda, também pode ser usada para páginas onde o conteúdo tem um fundo de cor diferente do fundo do site
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Posicionamento -->
     <section>
-        <div class="part">
+        <div class="part" id="posicionamento">
             <button type="button" class="part__head open">
-                <h2 id="posicionamento">
+                <h2>
                     Posicionamento
                 </h2>
             </button>
@@ -321,18 +413,21 @@
                 &nbsp;esquerda e direita.</p>
                 <p>
                     As coordenadas são as mesmas independente do tamanho do elemento ou tela, por isso é importante informar se ela é relativa ao topo ou fundo.</p>
-                <h3 id="Estática">
-                    Estática</h3>
+                <h3 id="estatica">
+                    Estática
+                </h3>
                 <p>
                     Posicionamento padrão dos elementos, no qual o elemento “ocupa um espaço” na tela, influência e é influenciado &nbsp;pelos elementos antes e depois.</p>
                 <h3 id="absoluta">
-                    Absoluta</h3>
+                    Absoluta
+                </h3>
                 <p>
                     Relativo a um outro elemento (que precisa conter esse elemento). a posição é fixa em relação a esse elemento é definida por coordenadas.</p>
                 <p>
                     Se você rolar a tela o elemento vai ficar preso ao posicionamento do elemento.</p>
                 <h3 id="fixa">
-                    Fixa</h3>
+                    Fixa
+                </h3>
                 <p>
                     Relativo a tela, a posição é fixa em relação a tela e é definida por coordenadas.</p>
                 <p>
@@ -340,12 +435,15 @@
                 <p>
                     Caso o elemento seja relativo ao final da página ou uma porcentagem da altura é importante informar o valor da coordenada ou o tamanho da tela utilizada, Uma alternativa para alinhamento ao final é já colocar o elemento no final do mockup. (Plataformas como o figma tem o atributo fixed para o elemento, só precisa ser atribuida a direção correta)</p>
                 <h3 id="sticky">
-                    Pegajoso Sticky</h3>
+                    Pegajoso Sticky
+                </h3>
                 <p>
                     É uma posição que varia entre o comportamento padrão(estático) e o fixo. O elemento não ultrapassa o elemento pai, mas enquanto dentro dele, ele fica fixo.</p>
                 <p>
                     Apesar de ser um comportamento já com um atributo de CSS muitas vezes este não pode ser utilizado, oque faz ser necessário a utilização de código extra (Javascript).
                 </p>
+                
+                <div class="title-play"><h3 id="positionsTest">Teste os posicionamentos</h3></div>
                     <div class="play play-single" id="p-position">
                         <div class="play__options">
                             <button type="button" class="class-button play__options__item active" value="empty">Padrão (estatica)</button>
@@ -357,13 +455,13 @@
                             <div class="play__show__content">
                                 <div class="box-1 color-1 m-30">
                                     <div class="float-item color-alert"></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
                                 </div>
                                 <div class="box-text m-30">
-                                    Item externo
+                                    Item externo - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
                                 </div>
                                 <div class="box-text m-30">
-                                   Item externo
+                                   Item externo - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 </div>
                             </div>
                         </div>
@@ -374,9 +472,9 @@
 
     <!-- Blocos  -->
     <section>
-        <div class="part">
+        <div class="part" id="blocos">
             <button type="button" class="part__head open">
-                <h2 id="blocos">
+                <h2>
                     Blocos
                 </h2>
             </button>
@@ -384,215 +482,195 @@
                 <p>
                     Blocos com diferentes elementos internos
                 </p>
-                <h3 id="h.mbo0ny2njtut">
-                    Falta de um elemento
-                </h3>
-                <p>
-                Por o editor não adicionar ou até um bug um elemento pode estar vazio. É sempre bom prever esses casos. 
-                </p>
-                <p>
-                    Só remover o elemento, com margem.
-                </p>
-                <p>
-                    Manter o espaço relativo a altura e largura do elemento.
-                </p>
-                <p>
-                    Ter um espaçamento diferente entre o elemento anterior e o próximo (normalmente o mesmo que uma altura mínima)
-                </p>
-                <p>
-                    Um elemento para quando estiver vazio (imagem place holder ou texto genérico)
-                </p>
-                <h3 id="h.mgo7nux7u7po">
-                    Tamanho mínimo e máximo
-                </h3>
-                <p>
-                    Considerar se for adicionado uma imagem ou texto maior ou menor que o esperado, como os outros elementos se comportam em relação a essa diferença de tamanho.
-                </p>
-                <ul>
-                    <li>
-                    Altura mínima e máxima</li>
-                    <li>
-                    Limite de linhas
-                    </li>
-                    <li>
-                    Alinhamento dos elementos nessas variações
-                    </li>
-                    <li>
-                    Tamanho dos blocos laterais 
-                    </li>
-                </ul>
-                <h3 id="h.i16g0somswy3">
-                    Alinhamento
-                </h3>
-                <p>
-                    Caso o elemento tenha uma altura maior que os elementos internos, os elementos internos podem ter um alinhamento pré definido
-                </p>
-                <ul>
-                    <li>
-                    Alinhar ao topo ou final, a esquerda ou direita
-                    </li>
-                    <li>
-                    Alinhar ao centro (vertical ou horizontal)
-                    </li>
-                    <li>
-                    espaçar igualmente os elementos
-                    </li>
-                    <li>
-                    um único elemento alinhado ao final
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Elementos transitivos -->
-    <section>
-        <div class="part">
-            <button type="button" class="part__head open">
-                <h2 id="elementosTransitivos">
-                    Elementos transitivos
-                </h2>
-            </button>
-            <div class="part__content">
-                <p>
-                    Elementos como carrosséis que mudam de conteúdo sem o recarregamento da página, “pedem” uma altura fixa pois a troca de conteúdo de tamanhos diferentes resulta na movimentação vertical dos elementos posteriores.
-                </p>
-                <p>
-                    Isso implica no limite dos elementos internos, e como funcionará o alinhamento em conteúdos menores que o regular.
-                </p>
-                <p>
-                    Exemplo: Um carrossel que contém título, parágrafo e botão (nessa ordem). Se for limitado somente a altura &nbsp;geral um texto grande resultará na perda do botão, Logo deverá ser definido uma altura para o título e parágrafo e se for o caso sempre ser visível parte parágrafo um limite de linhas para o título e para o parágrafo.
-                </p>
+                <div class="part">
+                    <button type="button" class="part__head open">
+                        <h3 id="blocoFalta">
+                            Falta de um elemento
+                        </h3>
+                    </button>
+                    <div class="part__content">
+                        <p>
+                        Por o editor não adicionar ou até um bug um elemento pode estar vazio. É sempre bom prever esses casos. 
+                        </p>
+                        <p>
+                            Só remover o elemento, com margem.
+                        </p>
+                        <p>
+                            Manter o espaço relativo a altura e largura do elemento.
+                        </p>
+                        <p>
+                            Ter um espaçamento diferente entre o elemento anterior e o próximo (normalmente o mesmo que uma altura mínima)
+                        </p>
+                        <p>
+                            Um elemento para quando estiver vazio (imagem place holder ou texto genérico)
+                        </p>
+                        <img src="img/blocoEspaço.png" title="Tipos de resultados sem uma parte do elemento" style="width: 500px;">
+                    </div>
+                </div>
+                <div class="part" id="blocoTamanho">
+                    <button type="button" class="part__head open">
+                        <h3>
+                            Tamanho mínimo e máximo
+                        </h3>
+                    </button>
+                    <div class="part__content">
+                        <p>
+                            Considerar se for adicionado uma imagem ou texto maior ou menor que o esperado, como os outros elementos se comportam em relação a essa diferença de tamanho.
+                        </p>
+                        <ul>
+                            <li>
+                            Altura mínima e máxima
+                            </li>
+                            <li>
+                            Limite de linhas (veja na parte de texto)
+                            </li>
+                            <li>
+                            Alinhamento dos elementos nessas variações
+                            </li>
+                            <li>
+                            Tamanho dos blocos laterais 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="part" id="blocoAlinhamento">
+                    <button type="button" class="part__head open">
+                        <h3>
+                            Alinhamento
+                        </h3>
+                    </button>
+                    <div class="part__content">
+                        <p>
+                            Caso o elemento tenha uma altura maior que os elementos internos, os elementos internos podem ter um alinhamento pré definido
+                        </p>
+                        <ul>
+                            <li>
+                            Alinhar ao topo ou final, a esquerda ou direita
+                            </li>
+                            <li>
+                            Alinhar ao centro (vertical ou horizontal)
+                            </li>
+                            <li>
+                            espaçar igualmente os elementos
+                            </li>
+                            <li>
+                            um único elemento alinhado ao final
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Elementos transitivos -->
+                <div class="part" id="elementosTransitivos">
+                    <button type="button" class="part__head open">
+                        <h3>
+                            Elementos transitivos
+                        </h3>
+                    </button>
+                    <div class="part__content">
+                        <p>
+                            Elementos como carrosséis que mudam de conteúdo sem o recarregamento da página, “pedem” uma altura fixa pois a troca de conteúdo de tamanhos diferentes resulta na movimentação vertical dos elementos posteriores.
+                        </p>
+                        <p>
+                            Isso implica no limite dos elementos internos, e como funcionará o alinhamento em conteúdos menores que o regular.
+                        </p>
+                        <p>
+                            Exemplo: Um carrossel que contém título, parágrafo e botão (nessa ordem). Se for limitado somente a altura &nbsp;geral um texto grande resultará na perda do botão, Logo deverá ser definido uma altura para o título e parágrafo e se for o caso sempre ser visível parte parágrafo um limite de linhas para o título e para o parágrafo.
+                        </p>
+                        <div class="title-play"><h3>Teste como a variação pode afetar o conteudo pa página</h3></div>
+                        <div class="play play-single" id="p-carousel">
+                            <div class="play__options">
+                                <button type="button" class="class-button play__options__item active"  value="empty">Sem limite de altura</button>
+                                <button type="button" class="class-button play__options__item " value="carousel-max-w">Com altura maxima do conteudo</button>
+                                <button type="button" class="class-button play__options__item " value="carousel-min-w">Com altura minima do conteudo</button>
+                                <button type="button" class="class-button play__options__item " value="carousel-fix">Com altura fixa</button>
+                            </div>
+                            <div class="play__show">
+                                <div class="play__show__content">
+                                    <div class="splide">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <div class="splide__slide">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                </div>
+                                                <div class="splide__slide">
+                                                    <p>Lorem ipsum dolor sit amet.</p>
+                                                </div>
+                                                <div class="splide__slide">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="box-text m-10">
+                                        Exemplo de item externo ao carrossel
+                                    </div>
+                                    <div class="box-text m-10">
+                                        Exemplo de item externo ao carrossel
+                                    </div>
+                                </div>
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Texto -->
     <section>
-        <div class="part">
+        <div class="part" id="texto">
             <button type="button" class="part__head open">
-                <h2 id="texto">
+                <h2>
                 Texto
                 </h2>
             </button>
             <div class="part__content">
-                <h3 id="blocoTexto">
-                    Bloco de texto
-                </h3>
-                <p>
-                    Sempre definir comportamentos para situações de limite, você pode exemplificar a situação com um grande texto e texto nenhum ou deixar um comentário com as especificações.
-                </p>
-                <p>
-                    Sugestão dar preferencia a textos grandes no mockup, além de te servir como alerta em como o elemento vai se comportar, muitas vezes o texto máximo já oferece informação suficiente pro desenvolvedor.
-                </p>
-                <p>
-                    O editor do site pode colocar um texto grande demais eu texto nenhum, e acontece com frequencia.
-                </p>
-            
-                <p>
-                    Evitar usar sempre o tamanho ideal. (mesmo que fique mais bonito no mockup)
-                </p>
-                <p>
-                <!-- <img alt="" src="images/image5.png" style="width: 567.81px; height: 98.55px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""> -->
-                </p>
-                <p>
-                    Usar uma caixa delimitadora com um conteúdo maior que o mostrado isso ilustra que o conteúdo deve ser cortado e que o elemento tem um altura máxima que deve ser respeitada. Isso também funciona no caso contrário é o elemento tem uma altura mínima.
-                </p>
-                <p>
-                <!-- <img alt="" src="images/image7.png" style="width: 604.72px; height: 297.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""> -->
-                </p>
-                <p>
-                    Usar um texto cortado e elipses indicando como proceder em casos que ultrapassem o limite de linhas. 
-                </p>
-                <p>
-                    <!-- <img alt="" src="images/image8.png" style="width: 604.72px; height: 93.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""> -->
-                </p>
-                <p>
-                    Informar por escrito as especificações necessárias, funciona bem e poupa tempo de produção dos exemplos. (Mas a produção de exemplos de mínimo e máximo é o ideal &nbsp;se quer visualizar o resultado)
-                </p>
-                <p>
-                    <!-- <img alt="" src="images/image6.png" style="width: 356.00px; height: 125.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""> -->
-                </p>
-                <h3 id="linha">
-                    Linha do texto
-                </h3>
-                <p>
-                    Deixar o alinhamento automático da caixa de texto (terminando na altura na linha), dessa maneira o espaçamento entre elementos vai estar correto. 
-                </p>
-                <p>
-                    O alinhamento errado pode causar diferenças na versão final do site (se o desenvolvedor não se atentar ao erro do mockup) ou gasto de tempo do desenvolvedor que vai ter calcular o tamanho correto.
-                </p>
-                <p>
-                    <!-- <img alt="" src="images/image1.png" style="width: 560.00px; height: 510.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""> -->
-                </p>
-                <p>
-                    Quando em texto deixar o espaço entre parágrafos visível, não há necessidade de fazer em todo o texto mas pelo menos um exemplo principalmente se o espaço for importante.
-                </p>
-                <p>
-                    <!-- <img alt="" src="images/image3.png" style="width: 604.72px; height: 416.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""> -->
-                </p>
-                <p>
-                    Sobre o espaço entre parágrafos, pode ser definido o espaço entre parágrafos e paralelo a isso o texto pode usar uma linha vazia como espaçamento é importante considerar se você quer esse espaçamento em todos os parágrafos e também como será o texto recebido pelo elemento(principalmente em um site já existente). Se o texto recebido tem linhas vazias para espaçar parágrafos e margem inferior o resultado será espaço dobrado, o contrário (sem linhas vazias e sem margem) resultará em nenhum espaçamento entre parágrafos.
-                </p>
-            
-                <h3 id="elementosTexto">
-                    Elementos de texto
-                </h3>
-                <p>
-                    Definir todos os elementos que poderão ser utilizados na área, exemplos:
-                </p>
-                <ul>
-                    <li>
-                        parágrafo
-                    </li>
-                    <li>
-                        títulos (diferentes níveis, quantos puderem ser adicionados)
-                    </li>
-                    <li>
-                        link
-                    </li>
-                    <li>
-                        lista com marcadores ou enumerada
-                    </li>
-                    <li>
-                        imagens (podendo conter descrição)
-                    </li>
-                </ul>
-                <p>
-                    Menos comuns:
-                </p>
-                <ul>
-                    <li>
-                        tabela
-                    </li>
-                    <li>
-                        blockquote
-                    </li>
-                    <li>
-                        botão entre textos
-                    </li>
-                    <li>
-                        Elementos específicos do seu site
-                    </li>
-                </ul>
-                <p>
-                    Todos os elementos devem ter uma margem
-            
-                    &nbsp;(não inclui links) definida normalmente a margem
-            
-                    &nbsp;inferior
-            
-                    , assim o espaço entre parágrafo seguido de uma lista será definido pelo parágrafo, mas também pode ser feito a partir da superior (se for coerente para o seu layout, mas mais incomum).
-                </p>
-                <p>
-                    Alguns elementos podem ter margem superior (títulos normalmente pedem um espaçamento superior maior que o padrão do texto), caso um elemento no texto tenha uma margem inferior seja seguido por um de margem superior prevalecerá a maior margem (exemplo um parágrafo com margem inferior 20 seguido de um titulo com margem superior 40, terá um espaçamento de 40 entre os elementos). Atenção esse tipo de margem funciona bem dentro do texto mas não em elementos complexos.
-                </p>
-                <p>
-                    Logo depois de definir todas as margens inferiores, você também pode atribuir uma margem superior para elementos que necessitam de um espaçamento maior (titulos, imagens, citações).
-                </p>
-                <p>
-                    Você também pode definir espaçamentos específicos entre 2 elementos (parágrafo seguido lista, título seguido de imagem), mas é ideal definir a margem padrão para evitar que algo fique com o espaçamento errado.
-                </p>
+                <div class="part" id="blocoTexto">
+                    <button type="button" class="part__head open">
+                        <h3>
+                            Bloco de texto
+                        </h3>
+                    </button>
+                    <div class="part__content">
+                        <p>
+                            Sempre definir comportamentos para situações de limite, você pode exemplificar a situação com um grande texto e texto nenhum ou deixar um comentário com as especificações.
+                        </p>
+                        <p>
+                            Sugestão dar preferencia a textos grandes no mockup, além de te servir como alerta em como o elemento vai se comportar, muitas vezes o texto máximo já oferece informação suficiente pro desenvolvedor.
+                        </p>
+                        <p>
+                            O editor do site pode colocar um texto grande demais eu texto nenhum, e acontece com frequencia.
+                        </p>
+                    
+                        <p>
+                            Evitar usar sempre o tamanho ideal. (mesmo que fique mais bonito no mockup)
+                        </p>
+                        <p>
+                        <!-- <img alt="" src="images/image5.png" style="width: 567.81px; height: 98.55px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""> -->
+                        </p>
+                        <p>
+                            Usar uma caixa delimitadora com um conteúdo maior que o mostrado isso ilustra que o conteúdo deve ser cortado e que o elemento tem um altura máxima que deve ser respeitada. Isso também funciona no caso contrário é o elemento tem uma altura mínima.
+                        </p>
+                        <p>
+                        <!-- <img alt="" src="images/image7.png" style="width: 604.72px; height: 297.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""> -->
+                        </p>
+                        <p>
+                            Usar um texto cortado e elipses indicando como proceder em casos que ultrapassem o limite de linhas. 
+                        </p>
+                        <p>
+                            <!-- <img alt="" src="images/image8.png" style="width: 604.72px; height: 93.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""> -->
+                        </p>
+                        <p>
+                            Informar por escrito as especificações necessárias, funciona bem e poupa tempo de produção dos exemplos. (Mas a produção de exemplos de mínimo e máximo é o ideal &nbsp;se quer visualizar o resultado)
+                        </p>
+                        <p>
+                            <!-- <img alt="" src="images/image6.png" style="width: 356.00px; height: 125.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""> -->
+                        </p>
+                    </div>
+                </div>
+                <div class="title-play"><h3>Teste o limite de linhas</h3></div>
                 <div class="play play-single" id="p-text">
                     <div class="play__options">
                         <button type="button" class="class-button play__options__item active" value="empty">Sem limites</button>
@@ -607,6 +685,101 @@
                         </div>
                     </div>
                 </div>
+                <div class="part" class="part__head open">
+                    <button type="button">
+                        <h3 id="linha">
+                            Linha do texto
+                        </h3>
+                    </button>
+                    <div class="part__content">
+                        <p>
+                            Deixar o alinhamento automático da caixa de texto (terminando na altura na linha), dessa maneira o espaçamento entre elementos vai estar correto. 
+                        </p>
+                        <p>
+                            O alinhamento errado pode causar diferenças na versão final do site (se o desenvolvedor não se atentar ao erro do mockup) ou gasto de tempo do desenvolvedor que vai ter calcular o tamanho correto.
+                        </p>
+                        <p>
+                            <img src="img/texto-alinhamento.png" title="Alinhamento de margem certo e errado" alt="dois conjuntos de titulo e subtitulo com caixas de texto marcadas, o primeiro com o margens apartir do corpo do texto e mardado como errado e a segunda com margens apartir da caixa de testo e marcado como certo" style="width: 890px;">
+                        </p>
+                        <p>
+                            Quando em texto deixar o espaço entre parágrafos visível, não há necessidade de fazer em todo o texto mas pelo menos um exemplo principalmente se o espaço for importante.
+                        </p>
+                        <p>
+                            <img alt="exemplo de dois paragrafos dentro de uma caixa de texto marcado como errado e a direita exemplo dos mesmos pagrafos em caixas separadas marcado como certo" src="img/entre-paragrafo.png" title="Exemplo de documentação entre paragrafos"  style="width: 850px;">
+                        </p>
+                        <p>
+                            Sobre o espaço entre parágrafos, pode ser definido o espaço entre parágrafos e paralelo a isso o texto pode usar uma linha vazia como espaçamento é importante considerar se você quer esse espaçamento em todos os parágrafos e também como será o texto recebido pelo elemento(principalmente em um site já existente). Se o texto recebido tem linhas vazias para espaçar parágrafos e margem inferior o resultado será espaço dobrado, o contrário (sem linhas vazias e sem margem) resultará em nenhum espaçamento entre parágrafos.
+                        </p>
+                    </div>
+                </div>
+                <div class="part" id="elementosTexto">
+                    <button type="button" class="part__head open">
+                        <h3>
+                            Elementos de texto
+                        </h3>
+                    </button>
+                    <div class="part__content">
+                        <p>
+                            Definir todos os elementos que poderão ser utilizados na área, exemplos:
+                        </p>
+                        <ul>
+                            <li>
+                                Parágrafo
+                            </li>
+                            <li>
+                                Títulos (diferentes níveis, quantos puderem ser adicionados)
+                            </li>
+                            <li>
+                                Link
+                            </li>
+                            <li>
+                                Lista com marcadores ou enumerada
+                            </li>
+                            <li>
+                                Imagens (podendo conter descrição)
+                            </li>
+                        </ul>
+                        <p>
+                            Menos comuns:
+                        </p>
+                        <ul>
+                            <li>
+                                Tabela
+                            </li>
+                            <li>
+                                Citação(Blockquote)
+                            </li>
+                            <li>
+                                Botão entre textos
+                            </li>
+                            <li>
+                                Caixas de texto
+                            </li>
+                            <li>
+                                Elementos específicos site
+                            </li>
+                        </ul>
+                        <p>
+                            Todos os elementos devem ter uma margem
+                            
+                            &nbsp;(não inclui links) definida normalmente a margem
+                            
+                            &nbsp;inferior
+                            
+                            , assim o espaço entre parágrafo seguido de uma lista será definido pelo parágrafo, mas também pode ser feito a partir da superior (se for coerente para o seu layout, mas mais incomum).
+                        </p>
+                        <p>
+                            Alguns elementos podem ter margem superior (títulos normalmente pedem um espaçamento superior maior que o padrão do texto), caso um elemento no texto tenha uma margem inferior seja seguido por um de margem superior prevalecerá a maior margem (exemplo um parágrafo com margem inferior 20 seguido de um titulo com margem superior 40, terá um espaçamento de 40 entre os elementos). Atenção esse tipo de margem funciona bem dentro do texto mas não em elementos complexos.
+                        </p>
+                        <p>
+                            Logo depois de definir todas as margens inferiores, você também pode atribuir uma margem superior para elementos que necessitam de um espaçamento maior (titulos, imagens, citações).
+                        </p>
+                        <p>
+                            Você também pode definir espaçamentos específicos entre 2 elementos (parágrafo seguido lista, título seguido de imagem), mas é ideal definir a margem padrão para evitar que algo fique com o espaçamento errado.
+                        </p>
+                    </div>
+                </div>
+                <div class="title-play"><h3>Teste a margem do texto</h3></div>
                 <div class="play play-multiple" id="p-text">
                     <div class="play__options">
                         <div class="play__options__item">
@@ -670,10 +843,10 @@
     </section> -->
 
     <!-- Imagens -->
-    <section>
+    <section id="imagens">
         <div class="part">
             <button type="button" class="part__head open">
-                <h2 id="imagens">
+                <h2>
                     Imagens
                 </h2>
             </button>
@@ -685,9 +858,11 @@
                 <p>
                     Em caso de imagens com tamanho em porcentagem, considerar telas grandes (e mobile grande).
                 </p>
-                <div class="part">
+                <div class="title-play"><h3>Teste tratamento de tamanho</h3></div>
+                
+                <div class="part" id="icones">
                     <button type="button" class="part__head open">
-                        <h3 id="Icones">
+                        <h3>
                             Imagens/Ícones padrão
                         </h3>
                     </button>
@@ -703,14 +878,15 @@
                         </p>
                     </div>
                 </div>
-                <div class="part">
+                <div class="title-play"><h3>Teste contenção em tamanho fixo</h3></div>
+                
+                <div class="part" id="imagensTamanho">
                     <button type="button" class="part__head open">
-                        <h3 id="imagens tamnho">
+                        <h3>
                             Tratando tamanho
                         </h3>
                     </button>
                     <div class="part__content">
-                       
                         <h4 id="tamanhoAutomatico">
                             Tamanho automático
                         </h4>
@@ -790,42 +966,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Elementos Mutáveis -->
-    <section>
-        <div class="part">
-            <button type="button" class="part__head open">
-                <h2 id="elementosMutaveis">
-                    Elementos Mutáveis
-                </h2>
-            </button>
-            <div class="part__content">
-                <p>
-                    Elementos que ativam uma animação, transição e mudança. Essas informações são passadas melhor de maneira escrita (nota ou tabela com situações) ou com um exemplo muito detalhado (o elemento em funcionamento ou um vídeo com as situações).
-                </p>
-                <ul>
-                    <li>
-                        Oque ativa 
-                    </li>
-                    <li>
-                        se é infinito ou limitado
-                    </li>
-                    <li>
-                        como vai funcionar
-                    </li>
-                    <li>
-                        se possível um exemplo
-                    </li>
-                </ul>
-                <p>Ex.: O quadrado flutuante a animação é ativada no hover do elemento total, o quadrado deve girar 90º uma vez e voltar ao estado inicial após o hover.</p>
-                <div class="ex">
-                    <div class="ex-card-h">
-                        <div class="ex-animation-block"></div>
                     </div>
                 </div>
             </div>

@@ -15,19 +15,29 @@ body {
   max-width: 1500px;
   padding-right: 298px;
   padding-left: 40px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+img {
+  max-width: 100%;
 }
 
 section {
   position: relative;
 }
 
-section:before {
-  content: '';
-  width: 100%;
-  border-top: 1px solid lightgray;
-  margin-top: -10px;
-  display: block;
-  position: absolute;
+section > .part {
+  border-top: 4px solid lightgray;
+}
+
+.key {
+  display: inline-block;
+  border: 1px solid gray;
+  background-color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8em;
+  padding: 0.2em;
+  color: #000;
 }
 
 /* buttons */
@@ -36,6 +46,16 @@ button, .btn {
   background-color: transparent;
   text-decoration: none;
   cursor: pointer;
+}
+
+.btn--ex {
+  background-color: cyan;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.btn--ex:hover {
+  border-color: #000;
 }
 
 .btn-top, .btn-bottom {
@@ -71,12 +91,44 @@ button, .btn {
           transform: rotate(180deg);
 }
 
+.title-play {
+  margin-bottom: 19px;
+  margin-top: 23px;
+}
+
 .btn--close, .btn--config {
+  color: transparent;
   width: 48px;
   height: 48px;
   background-color: lightgray;
   margin-bottom: 10px;
   font-size: 8px;
+  position: relative;
+  background-image: url(img/x.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+}
+
+.top-mensage {
+  margin-bottom: 30px;
+}
+
+.top-mensage--mob {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .top-mensage {
+    border: 2px solid red;
+    padding: 10px;
+  }
+  .top-mensage p {
+    display: none;
+  }
+  .top-mensage--mob {
+    display: block;
+  }
 }
 
 .side-nav {
@@ -85,14 +137,64 @@ button, .btn {
   top: 10px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  height: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  bottom: 10px;
 }
 
 .side-nav:not(.open) {
-  right: -200px;
+  right: -216px;
+}
+
+.side-nav:not(.open) + .page-content {
+  padding-right: 78px;
+}
+
+.side-nav:not(.open) .btn--close {
+  background-image: url(img/list.svg);
+}
+
+.side-nav ol {
+  padding: 0px;
+  list-style: none;
+}
+
+.side-nav ol li {
+  margin-top: 16px;
+}
+
+.side-nav ol li li {
+  margin-top: 6px;
+  font-size: .9em;
+}
+
+.side-nav ol ol {
+  padding-left: 10px;
+}
+
+.side-nav ol a {
+  display: block;
+  color: #000;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+@media (hover: hover) {
+  .side-nav ol a {
+    text-decoration: none;
+  }
+  .side-nav ol a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+}
+
+.side-nav h2 {
+  font-size: 1.3rem;
+  margin: 0;
+  text-align: center;
 }
 
 .side-nav__menu {
@@ -109,8 +211,9 @@ button, .btn {
 }
 
 .side-nav__content {
-  overflow: hidden;
-  width: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 215px;
   height: 100%;
   /* margin: 0 10px; */
   position: relative;
@@ -141,11 +244,27 @@ button, .btn {
 }
 
 .part {
-  margin-top: 40px;
+  margin-top: 28px;
+  border-right: 4px solid lightgray;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  padding: 0 6px 4px 0;
 }
 
 .part .part {
   margin-top: 20px;
+}
+
+.part .part:target:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 10px solid transparent;
+  left: -5px;
+  opacity: 0;
+  top: 50%;
+  -webkit-animation: flash 2s;
+          animation: flash 2s;
 }
 
 .part *:first-child {
@@ -202,6 +321,12 @@ button, .btn {
 .part__head:not(.open) + .part__content {
   height: 0;
   margin-top: 0px;
+  margin-top: -35px;
+  margin-bottom: 35px;
+}
+
+.part__head:not(.open) + .part__content .part:target:before {
+  border-bottom-color: #000;
 }
 
 .part__content {
@@ -219,6 +344,7 @@ button, .btn {
   display: flex;
   padding: 10px;
   background-color: #cacaca;
+  position: relative;
 }
 
 .play__show {
@@ -310,5 +436,35 @@ button, .btn {
 .m-30 {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
