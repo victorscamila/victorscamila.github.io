@@ -3,6 +3,7 @@
 <head>
     
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
     
 <title>Pg</title>
     
@@ -137,21 +138,22 @@
                     </button>
                     <div class="part__content">
                         <p>
-                            Exemplificar o mesmo elemento em 2 tamanhos de tela.</p>
+                            Passar toda informar necessária pro elemento, se algo não esta claro deixe por escrito os detalhes através de comentários e/ou ilustrações como o elemento deve se comportar.
+                        </p>
                         <p>
-                            Exemplificar o elemento com muita e mínima informação.</p>
+                            Exemplificar elementos que se repetem muito separados do layout da página, dessa maneira as pequenas variações acidentais de posicionamento interferem no desenvolvimento.
+                        </p>
                         <p>
-                            Exemplificar os diferentes estados do elemento.</p>
+                            Informar limites de tamanho, proporções se a medida é estática ou percentual. Caso o elemento seja muito complexo ou voce não tenha certeza de como tamanho deve se comportar exemplificar o mesmo elemento em 2 tamanhos de tela (diferentes mas dentro do mesmo layout de desktop ou mobile), deve mostrar melhor para o desenvolvedor como o elemento funciona.
+                        </p>
                         <p>
-                            Exemplificar como funcionará sem parte dos elementos.</p>
+                            Exemplificar o elemento com muito e mínimo conteudo. E se necessário com elementos vasios (dificilmente um elemento não tem titulo, mas a falta de texto introdutorio e imagens é comum).
+                        </p>
                         <p>
-                            Exemplificar elementos que se repetem muito separados do layout para ter as medidas corretas. </p>
+                            Exemplificar os diferentes estados do elemento (veja mais em elementos mutaveis). Exemplificação na propria pagina, tabelas com todos os estados ou notas como o elemento precisa ser detalhado depende da complexidade do mesmo.
+                        </p>
                         <p>
-                            Informar através de comentários e/ou ilustrações como o elemento deve se comportar.</p>
-                        <p>
-                            Informar qual elemento está relacionado a margem.</p>
-                        <p>
-                            Informar limites de tamanho, proporções se a medida é estática ou percentual.
+                            Informar qual elemento está relacionado a propriedade (margem é relativa ao elemento pai, ao ultimo elemento interno ou ao elemento posterior).
                         </p>
                     </div>
                 </div>
@@ -250,24 +252,24 @@
                         </h3>
                     </button>
                     <div class="part__content">
-                        <div class="part">
-                            <h4 id="porcentagem">
+                        <div class="part" id="porcentagem">
+                            <h4>
                                 Porcentagem
                             </h4>
                             <p>
                                 Funciona a partir no tamanho do elemento pai (em caso de posicionamento absoluto o elemento q ele está relacionado e fixo se considera a tela).
                             </p>
                         </div>
-                        <div class="part">
-                            <h4 id="vw e vh">
+                        <div class="part" id="vw e vh">
+                            <h4>
                                 VW e VH
                             </h4>
                             <p>
                                 Porcentagem da tela. 1vh 1% da altura da tela e 1vw 1% da largura da tela.
                             </p>
                         </div>
-                        <div class="part">
-                            <h4 id="pixel">
+                        <div class="part" id="pixel">
+                            <h4>
                                 Pixel
                             </h4>
                             <p>
@@ -276,24 +278,30 @@
                                 Evitar o uso de 0.5px, o navegador não mostra meio pixel e arredonda (para baixo). E pixels quebrados causam desalinhamentos com elementos internos podendo ou não deixar um pixel vazio entre o elemento e conteúdo.
                             </p>
                         </div>
-                        <div class="part">
-                            <h4 id="rem">
+                        <div class="part" id="rem">
+                            <h4>
                                 Rem
                             </h4>
                             <p>
-                                Unidade mais comum para fontes, é o tamanho padrão de fonte do navegador. Normalmente equivalente a 16px, varia de acordo com a especificação do navegador.
+                                Unidade mais comum para fontes, é o tamanho padrão de fonte do navegador e pode ser configurado no navegador (muito utilizado por pessoas com dificuldade de visão).
                             </p>
                             <p>
-                                Fonte de tamanho 20px será 1.25rem.
+                                Normalmente equivalente a 16px, mas pode ser configurado pra outro valor para facilitar estilização do site. Desta maneira você pode aumentar ou reduzir todas as fontes do site e manter a mesma hierarquia. 
+                            </p>
+                            <p>
+                                O tamanho fonte base desse documento é 1rem (equivalente a 16px).
                             </p>
                         </div>
-                        <div class="part">
-                            <h4 id="em">
+                        <div class="part" id="em">
+                            <h4>
                                 Em 
                             </h4>
                             <p>
                                 É equivalente ao tamanho da fonte do elemento(ou do pai). Utilizada para medidas que precisam ser relacionadas ao tamanho de fonte e serão utilizadas em elementos diferentes com diversos tamanhos de fonte.
                             </p>
+                            <p>Exemplo:</p>
+                            <p style="font-size: 16px;">Essa linha tem fonte 16px <span style="font-size: 0.75em;">Esse comentario tem tamanho 0.75em (12px)</span></p>
+                            <p style="font-size: 20px;">Essa linha tem fonte 20px <span style="font-size: 0.75em;">Esse comentario tem tamanho 0.75em (15px)</span></p>
                         </div>
                     </div>
                 </div>
@@ -344,16 +352,6 @@
                             O tamanho das colunas é normalmente definido por porcentagem(o número de colunas é o suficiente). Pode ser mantido um tamanho fixo mas isso demanda um Container sempre menor &nbsp;que a tela (oque não funcionará bem mobile).</p>
                         <p>
                             É importante seguir o Grid no site principalmente na contenção dos elementos, Você pode fazer elementos fora do grid mas esses demandam mais tempo e trabalho além de serem mais difíceis de serem adaptados nos tamanhos de tela intermediários.</p>
-                        <h3 id="maxContainer">
-                            Tamanho Máximo do container</h3>
-                        <p>
-                            Definir break points, para intervalos de tela.</p>
-                        <p>
-                            Se o tamanho máximo do container for menor que o tamanho mínimo do intervalo - margem mínima o container terá 100% da largura logo variará mais.</p>
-                        <p>
-                            Container 100% ou menor que tela?</p>
-                        <p>
-                            O container &nbsp;menor que a tela dá mais controle ao designer pra elementos que podem ficar grandes ou apertados demais já que há uma grande variação de largura, mas em telas pequenas (desktop ou mobile) a tela 100% proporciona mais espaço.</p>
                     </div>
                 </div>
                 <div class="part" id="maxContainer">
@@ -482,9 +480,9 @@
                 <p>
                     Blocos com diferentes elementos internos
                 </p>
-                <div class="part">
+                <div class="part" id="blocoFalta">
                     <button type="button" class="part__head open">
-                        <h3 id="blocoFalta">
+                        <h3>
                             Falta de um elemento
                         </h3>
                     </button>
@@ -685,9 +683,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="part" class="part__head open">
-                    <button type="button">
-                        <h3 id="linha">
+                <div class="part" id="linha">
+                    <button class="part__head open" type="button">
+                        <h3>
                             Linha do texto
                         </h3>
                     </button>
@@ -843,8 +841,8 @@
     </section> -->
 
     <!-- Imagens -->
-    <section id="imagens">
-        <div class="part">
+    <section>
+        <div class="part" id="imagens">
             <button type="button" class="part__head open">
                 <h2>
                     Imagens
@@ -858,7 +856,7 @@
                 <p>
                     Em caso de imagens com tamanho em porcentagem, considerar telas grandes (e mobile grande).
                 </p>
-                <div class="title-play"><h3>Teste tratamento de tamanho</h3></div>
+                
                 
                 <div class="part" id="icones">
                     <button type="button" class="part__head open">
@@ -878,8 +876,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="title-play"><h3>Teste contenção em tamanho fixo</h3></div>
-                
+
                 <div class="part" id="imagensTamanho">
                     <button type="button" class="part__head open">
                         <h3>
@@ -926,44 +923,51 @@
                         <p>
                             Principalmente em elementos relacionados a largura da tela e com altura automática ou proporcional a largura, se atentar ao tamanho da imagem quando a largura é muito grande &nbsp;a imagem pode ficar desproporcional a tela.
                         </p>
-                        <div class="play play-multiple" id="p-image">
-                            <div class="play__options">
-                                <button type="button" class="class-button play__options__item" value="img-stretch-h">Esticar vertical</button>
-                                <button type="button" class="class-button play__options__item" value="img-stretch-w">Esticar horizontalmente</button>
-                                <button type="button" class="class-button play__options__item" value="img-contain-h">Conter verticalmente</button>
-                                <button type="button" class="class-button play__options__item" value="img-contain-w">Conter horizontalmente</button>
-                            </div>
-                            <div class="play__show">
-                                <div class="play__show__button">
-                                    <button type="button" id="sw">Trocar</button>
-                                </div>
-                                <div class="play__show__content">
-                                    <div class="color-1 box-1x1 box-img">
-                                        <!-- <div class="box-img__contain"> -->
-                                            <img src="https://via.placeholder.com/500x90.png" alt="">
-                                        <!-- </div> -->
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+                <div class="title-play">
+                    <h3>Teste tratamento de tamanho</h3>
+                </div>
+
+                <div class="play play-multiple" id="p-image">
+                    <div class="play__options">
+                        <button type="button" class="class-button play__options__item" value="img-stretch-h">Esticar vertical</button>
+                        <button type="button" class="class-button play__options__item" value="img-stretch-w">Esticar horizontalmente</button>
+                        <button type="button" class="class-button play__options__item" value="img-contain-h">Conter verticalmente</button>
+                        <button type="button" class="class-button play__options__item" value="img-contain-w">Conter horizontalmente</button>
+                    </div>
+                    <div class="play__show">
+                        <div class="play__show__button">
+                            <button type="button" id="sw">Trocar</button>
+                        </div>
+                        <div class="play__show__content">
+                            <div class="color-1 box-1x1 box-img">
+                                <!-- <div class="box-img__contain"> -->
+                                    <img src="https://via.placeholder.com/500x90.png" alt="">
+                                <!-- </div> -->
                             </div>
                         </div>
-                        <div class="play play-single" id="p-image-1x1">
-                            <div class="play__options">
-                                <button type="button" class="class-button play__options__item active" value="empty">Esticar</button>
-                                <button type="button" class="class-button play__options__item" value="img-contain">Conter</button>
-                                <button type="button" class="class-button play__options__item" value="img-scale">Ajustar (conter se maior)</button>
-                                <button type="button" class="class-button play__options__item" value="img-cover">Cortar</button>
-                            </div>
-                            <div class="play__show">
-                                <div class="play__show__button">
-                                    <button type="button" id="sw">Trocar</button>
-                                </div>
-                                <div class="play__show__content">
-                                    <div class="color-1 box-1x1 box-img">
-                                        <!-- <div class="box-img__contain"> -->
-                                            <img src="https://via.placeholder.com/500x90.png" alt="">
-                                        <!-- </div> -->
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+                <div class="title-play">
+                    <h3>Teste contenção em tamanho fixo</h3>
+                </div>
+                <div class="play play-single" id="p-image-1x1">
+                    <div class="play__options">
+                        <button type="button" class="class-button play__options__item active" value="empty">Esticar</button>
+                        <button type="button" class="class-button play__options__item" value="img-contain">Conter</button>
+                        <button type="button" class="class-button play__options__item" value="img-scale">Ajustar (conter se maior)</button>
+                        <button type="button" class="class-button play__options__item" value="img-cover">Cortar</button>
+                    </div>
+                    <div class="play__show">
+                        <div class="play__show__button">
+                            <button type="button" id="sw">Trocar</button>
+                        </div>
+                        <div class="play__show__content">
+                            <div class="color-1 box-1x1 box-img">
+                                <!-- <div class="box-img__contain"> -->
+                                    <img src="https://via.placeholder.com/500x90.png" alt="">
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
