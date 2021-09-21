@@ -45,4 +45,38 @@ document.addEventListener('DOMContentLoaded',function(){
             })
         })
     })
+
+    const srcs = [
+        './img/exemplos/1.png',
+        './img/exemplos/2.png',
+        './img/exemplos/3.jpg',
+        './img/exemplos/4.jpg',
+        './img/exemplos/5.JPG',
+        './img/exemplos/6.svg',
+        './img/exemplos/7.svg',
+        './img/exemplos/8.jpg',
+        './img/exemplos/9.jpg',
+        './img/exemplos/10.jpg',
+        './img/exemplos/11.jpg',
+        './img/exemplos/12.jpg',
+        './img/exemplos/13.jpg'
+    ]
+    let counter = 0
+
+    // Image Shifter
+    const shifts = document.getElementsByClassName('img-shift')
+    
+    for (const img of shifts){
+        const shifter = img.getElementsByClassName('img-shifter')
+        const shifted = img.getElementsByClassName('img-shifted')
+
+        shifter[0] && shifter[0].addEventListener('click',function(){
+            shifted[0] && (shifted[0].src = srcs[counter])
+            counter++
+            if (counter >= 13){
+                counter = 0
+            }
+        })
+
+    }
 })
