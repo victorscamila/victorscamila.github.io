@@ -79,4 +79,16 @@ document.addEventListener('DOMContentLoaded',function(){
         })
 
     }
+    let playShow = document.getElementById('p-position-show');
+})
+$(document).ready(function(){
+    $(".play__show").scroll(function () {
+       
+        var top_of_box = $('.box-1').position().top;
+        var bottom_of_box =  $('.box-1').height() *(-1) + 60;
+        var top_of_box_pos = 0 - top_of_box;
+        if ((top_of_box < 0) && (top_of_box > bottom_of_box)) {
+            $(".float-item").css({"transform" : `translateY(${top_of_box_pos}px)`});
+        }
+    });
 })

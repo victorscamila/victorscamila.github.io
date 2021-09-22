@@ -55,6 +55,7 @@ $color-dark-3: darkred;
         position: absolute;
         top: 20px;
         margin-left: -80px;
+        
     }
 }
 .absolute .box-1{
@@ -63,6 +64,12 @@ $color-dark-3: darkred;
         position: absolute;
         top: 10px;
         left: -30px;
+    }
+}
+.sticky {
+    position: relative;
+    .float-item {
+        position: absolute;
     }
 }
 .img {
@@ -121,6 +128,11 @@ $color-dark-3: darkred;
 }
 /* IDS */
 #p-position {
+    .play__show:not(.sticky) {
+        .float-item {
+            transform: none!important;
+        }
+    }
     .play__show__content {
         max-height: 250px;
         p {

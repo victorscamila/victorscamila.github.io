@@ -72,6 +72,14 @@
   left: -30px;
 }
 
+.sticky {
+  position: relative;
+}
+
+.sticky .float-item {
+  position: absolute;
+}
+
 .img-contain-h img {
   max-height: 100%;
 }
@@ -142,6 +150,11 @@
 }
 
 /* IDS */
+#p-position .play__show:not(.sticky) .float-item {
+  -webkit-transform: none !important;
+          transform: none !important;
+}
+
 #p-position .play__show__content {
   max-height: 250px;
 }
