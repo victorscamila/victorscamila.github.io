@@ -5,7 +5,6 @@ body {
     line-height: normal;
     padding-bottom: 50px;
 }
-
 .aaa {
     background-color: yellow!important;
 }
@@ -76,7 +75,7 @@ button, .btn {
         left: 0;
         top: 0;
         /* background-color: #fff; */
-        background-image: url(assets/img/arrow-up.svg);
+        background-image: url(../img/arrow-up.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 30px;
@@ -101,7 +100,7 @@ button, .btn {
     margin-bottom: 10px;
     font-size: 8px;
     position: relative;
-    background-image: url(assets/img/x.svg);
+    background-image: url(../img/x.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px;
@@ -150,7 +149,7 @@ button, .btn {
             }
         }
         .btn--close {
-            background-image: url(assets/img/list.svg);
+            background-image: url(../img/list.svg);
         }
     }
     ol {

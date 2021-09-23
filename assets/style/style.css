@@ -82,7 +82,7 @@ button, .btn {
   left: 0;
   top: 0;
   /* background-color: #fff; */
-  background-image: url(img/arrow-up.svg);
+  background-image: url(../img/arrow-up.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 30px;
@@ -111,7 +111,7 @@ button, .btn {
   margin-bottom: 10px;
   font-size: 8px;
   position: relative;
-  background-image: url(img/x.svg);
+  background-image: url(../img/x.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
@@ -181,7 +181,7 @@ button, .btn {
 }
 
 .side-nav:not(.open) .btn--close {
-  background-image: url(img/list.svg);
+  background-image: url(../img/list.svg);
 }
 
 .side-nav ol {
