@@ -47,19 +47,18 @@ document.addEventListener('DOMContentLoaded',function(){
     })
 
     const srcs = [
-        './img/exemplos/1.png',
-        './img/exemplos/2.png',
-        './img/exemplos/3.jpg',
-        './img/exemplos/4.jpg',
-        './img/exemplos/5.JPG',
-        './img/exemplos/6.svg',
-        './img/exemplos/7.svg',
-        './img/exemplos/8.jpg',
-        './img/exemplos/9.jpg',
-        './img/exemplos/10.jpg',
-        './img/exemplos/11.jpg',
-        './img/exemplos/12.jpg',
-        './img/exemplos/13.jpg'
+        './assets/img/exemplos/2.png',
+        './assets/img/exemplos/3.jpg',
+        './assets/img/exemplos/4.jpg',
+        './assets/img/exemplos/5.JPG',
+        './assets/img/exemplos/6.svg',
+        './assets/img/exemplos/7.svg',
+        './assets/img/exemplos/8.jpg',
+        './assets/img/exemplos/9.jpg',
+        './assets/img/exemplos/10.jpg',
+        './assets/img/exemplos/11.jpg',
+        './assets/img/exemplos/12.jpg',
+        './assets/img/exemplos/13.jpg'
     ]
     let counter = 0
 
