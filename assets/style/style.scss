@@ -15,12 +15,16 @@ body {
     padding-right: 298px;
     padding-left: 40px;
     transition: 0.2s;
+    max-width: 900px;
     @media (max-width: 767px)  {
         padding: 50px 20px;
     }
 }
 img {
     max-width: 100%;
+}
+p {
+    max-width: 750px;
 }
 section {
     position: relative;

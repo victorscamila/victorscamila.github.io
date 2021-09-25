@@ -17,6 +17,7 @@ body {
   padding-left: 40px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  max-width: 900px;
 }
 
 @media (max-width: 767px) {
@@ -27,6 +28,10 @@ body {
 
 img {
   max-width: 100%;
+}
+
+p {
+  max-width: 750px;
 }
 
 section {

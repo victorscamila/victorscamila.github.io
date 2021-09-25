@@ -95,9 +95,9 @@
             !! Esse material não recomendado para visualização mobile
         </div>
      </div>
-    <h1 id="titulo1">Direções para produção web design mais clara e controlada</h1>
+    <h1 id="titulo1">Diretrizes para projetos de web design a partir de atributos de css</h1>
     <p>
-        Saiba como você quer a sua pagina, e passe para o desenvolvedor.
+        Saiba como você quer a sua página, e passe para o desenvolvedor.
     </p>
     <!-- 
     <div class="play play-single">
@@ -138,22 +138,22 @@
                     </button>
                     <div class="part__content">
                         <p>
-                            Passar toda informar necessária pro elemento, se algo não esta claro deixe por escrito os detalhes através de comentários e/ou ilustrações como o elemento deve se comportar.
+                            Passar toda informação necessária pro elemento, se algo não está claro deixe por escrito os detalhes através de comentários e/ou ilustrações como o elemento deve se comportar.
                         </p>
                         <p>
                             Exemplificar elementos que se repetem muito separados do layout da página, dessa maneira as pequenas variações acidentais de posicionamento interferem no desenvolvimento.
                         </p>
                         <p>
-                            Informar limites de tamanho, proporções se a medida é estática ou percentual. Caso o elemento seja muito complexo ou voce não tenha certeza de como tamanho deve se comportar exemplificar o mesmo elemento em 2 tamanhos de tela (diferentes mas dentro do mesmo layout de desktop ou mobile), deve mostrar melhor para o desenvolvedor como o elemento funciona.
+                            Informar limites de tamanho, proporções se a medida é estática ou percentual. Caso o elemento seja muito complexo ou você não tenha certeza de como tamanho deve se comportar exemplificar o mesmo elemento em 2 tamanhos de tela (diferentes mas dentro do mesmo layout de desktop ou mobile), deve mostrar melhor para o desenvolvedor como o elemento funciona.
                         </p>
                         <p>
-                            Exemplificar o elemento com muito e mínimo conteudo. E se necessário com elementos vasios (dificilmente um elemento não tem titulo, mas a falta de texto introdutorio e imagens é comum).
+                            Exemplificar o elemento com muito e mínimo conteúdo. E se necessário com elementos vazios (dificilmente um elemento não tem título, mas a falta de texto introdutório e imagens é comum).
                         </p>
                         <p>
-                            Exemplificar os diferentes estados do elemento (veja mais em elementos mutaveis). Exemplificação na propria pagina, tabelas com todos os estados ou notas como o elemento precisa ser detalhado depende da complexidade do mesmo.
+                            Exemplificar os diferentes estados do elemento (veja mais em elementos mutáveis). Exemplificação na própria página, tabelas com todos os estados ou notas como o elemento precisa ser detalhado depende da complexidade do mesmo.
                         </p>
                         <p>
-                            Informar qual elemento está relacionado a propriedade (margem é relativa ao elemento pai, ao ultimo elemento interno ou ao elemento posterior).
+                            Informar qual elemento está relacionado a propriedade (margem é relativa ao elemento pai, ao último elemento interno ou ao elemento posterior).
                         </p>
                     </div>
                 </div>
@@ -214,7 +214,7 @@
                                 se possível um exemplo
                             </li>
                         </ul>
-                        <p>Ex.: O quadrado flutuante a animação é ativada no hover do elemento total, o quadrado deve girar 90º uma vez e voltar ao estado inicial após o hover.</p>
+                        <p>Ex.: O quadrado flutuante a animação é ativada no <i>hover</i> do elemento total, o quadrado deve girar 90º uma vez e voltar ao estado inicial após o <i>hover</i>.</p>
                         <div class="ex">
                             <div class="ex-card-h">
                                 <div class="ex-animation-block"></div>
@@ -224,23 +224,24 @@
                             Hover
                         </h4>
                         <p>
-                            Os elementos clicáveis ainda são entendíveis sem o hover.</p>
+                            Os elementos clicáveis ainda são entendíveis sem o <i>hover</i>
+                            .</p>
                         <p>
-                            Existem telas de tamanho intermediário, logo o mesmo tamanho de tela pode ser um notebook ou um tablet, Informações que são exibidas em hover podem estar sempre visiveis em em touch ou ter outro comportamento (o desenvolvedor pode resolver especificar isso facilmente)
+                            Existem telas de tamanho intermediário, logo o mesmo tamanho de tela pode ser um notebook ou um tablet, Informações que são exibidas em <i>hover</i> podem estar sempre visíveis em em <i>touch</i> ou ter outro comportamento (o desenvolvedor pode resolver especificar isso facilmente)
                         </p>
 
                         <h4 id="focus">
                             Focus
                         </h4>
                         <p>
-                            Não peça para remover o focus dos elementos (regularmente um outline em volta do inputs), eles são de extrema importância.</p>
+                            Não peça para remover o <i>focus</i> dos elementos (regularmente um outline em volta do inputs), eles são de extrema importância.</p>
                         <p>
-                            Você pode estilizar o focus mas isso fará dele visível após click. Você pode só manter o focus padrão, ele é uma ferramenta prática e só será visto quando necessário.
+                            Você pode estilizar o <i>focus</i> mas isso fará dele visível após click. Você pode só manter o <i>focus</i> padrão, ele é uma ferramenta prática e só será visto quando necessário.
                         </p>
                         <p style="margin-bottom: 0;">Ex.: </p>
-                        <input type="text" placeholder="clique para ver o hover" style="margin-right: 10px;" readonly>
+                        <input type="text" placeholder="clique para ver o focus" style="margin-right: 10px;" readonly>
                         <a href="#0" style="margin-right: 10px; ">do input ao lado aperte 
-                            <span class="key">Tab ↹</span> para ver focus nesse link</a>
+                            <span class="key">Tab ↹</span> para ver <i>focus</i> nesse link</a>
                         <button class="btn btn--ex" type="button" style="margin-right: 10px; "><span class="key">Tab ↹</span> denovo para esse botão </button>
                     </div>
                 </div>
@@ -257,15 +258,15 @@
                                 Porcentagem
                             </h4>
                             <p>
-                                Funciona a partir no tamanho do elemento pai (em caso de posicionamento absoluto o elemento q ele está relacionado e fixo se considera a tela).
+                                Funciona a partir do tamanho do elemento pai (em caso de posicionamento absoluto o elemento que ele está relacionado e fixo se considera a tela).
                             </p>
                         </div>
                         <div class="part" id="vw e vh">
                             <h4>
-                                VW e VH
+                                vm, vh e vmin 
                             </h4>
                             <p>
-                                Porcentagem da tela. 1vh 1% da altura da tela e 1vw 1% da largura da tela.
+                                Porcentagem da tela. 1vh 1% da altura da tela e 1vw 1% da largura da tela. 1vmin é 1% da menor medida da tela e vmax é 1% da maior medida de altura ou largura da tela.
                             </p>
                         </div>
                         <div class="part" id="pixel">
@@ -300,8 +301,8 @@
                                 É equivalente ao tamanho da fonte do elemento(ou do pai). Utilizada para medidas que precisam ser relacionadas ao tamanho de fonte e serão utilizadas em elementos diferentes com diversos tamanhos de fonte.
                             </p>
                             <p>Exemplo:</p>
-                            <p style="font-size: 16px;">Essa linha tem fonte 16px <span style="font-size: 0.75em;">Esse comentario tem tamanho 0.75em (12px)</span></p>
-                            <p style="font-size: 20px;">Essa linha tem fonte 20px <span style="font-size: 0.75em;">Esse comentario tem tamanho 0.75em (15px)</span></p>
+                            <p style="font-size: 16px;">Essa linha tem fonte 16px <span style="font-size: 0.75em;">Esse comentário tem tamanho 0.75em (12px)</span></p>
+                            <p style="font-size: 20px;">Essa linha tem fonte 20px <span style="font-size: 0.75em;">Esse comentário tem tamanho 0.75em (15px)</span></p>
                         </div>
                     </div>
                 </div>
@@ -321,7 +322,7 @@
                 <p>
                     O grid pode funcionar de maneiras diferentes, é importante caso use um grid fora do comum conversar com um desenvolvedor sobre as possibilidades e praticidade.</p>
                 <p>
-                    O grid é o elemento mais importante para responsividade, ele tem que ser pensado para todos os tamanhos de tela. Definir Break points e pensar tamanhos intermediários os tamanhos intermediários não precisam ser exemplificados, mas precisam ser considerados na definição do grid.</p>
+                    O grid é o elemento mais importante para responsividade, ele tem que ser pensado para todos os tamanhos de tela. Definir <i>breakpoints</i> e pensar tamanhos intermediários os tamanhos intermediários não precisam ser exemplificados, mas precisam ser considerados na definição do grid.</p>
                 <p>
                     A “direção” do tamanho, que foi definido para o grid para um tamanho de tela, essas definições servem para esse tamanho para que intervalo de tamanho de tela. Basicamente  um tamanho pode ser pra telas igual ou acima daquele tamanho ou telas até aquele tamanho.</p>
                 <p>
@@ -362,7 +363,7 @@
                     </button>
                     <div class="part__content">
                         <p>
-                            Definir break points, para intervalos de tela.</p>
+                            Definir <i>breakpoints</i>, para intervalos de tela.</p>
                         <p>
                             Se o tamanho máximo do container for menor que o tamanho mínimo do intervalo - margem mínima o container terá 100% da largura logo variará mais.</p>
                         <p>
@@ -380,7 +381,7 @@
                         <p>
                             Pode ser um tamanho fixo em pixels, uma porcentagem ou até um porcentagem da tela, normalmente é usado em pixels.</p>
                         <p>
-                                Normalmente no código ela é formada de metade da calha em cada coluna, logo elementos que contam com a calha são complicados de serem implementados.</p>
+                            Normalmente no código ela é formada de metade da calha em cada coluna, logo elementos que contam com a calha são complicados de serem implementados.</p>
                     </div>
                 </div>
                 <div class="part" id="margemExterna">
@@ -407,7 +408,7 @@
             </button>
             <div class="part__content">
                 <p>
-                    Quando Utilizar um elemento que não terá o posicionamento padrão é importante informar qual o elemento que ele está relacionado e as coordenadas a serem seguidas, As coordenadas podem ser em qualquer unidade, e em relação &nbsp;ao topo, final,
+                    Quando utilizar um elemento que não terá o posicionamento padrão é importante informar qual o elemento que ele está relacionado e as coordenadas a serem seguidas, As coordenadas podem ser em qualquer unidade, e em relação ao topo, final,
                 &nbsp;esquerda e direita.</p>
                 <p>
                     As coordenadas são as mesmas independente do tamanho do elemento ou tela, por isso é importante informar se ela é relativa ao topo ou fundo.</p>
@@ -444,8 +445,8 @@
                 <div class="title-play"><h3 id="positionsTest">Teste os posicionamentos</h3></div>
                     <div class="play play-single" id="p-position">
                         <div class="play__options">
-                            <button type="button" class="class-button play__options__item active" value="empty">Padrão (estatica)</button>
-                            <button type="button" class="class-button play__options__item" value="absolute">Absotula</button>
+                            <button type="button" class="class-button play__options__item active" value="empty">Padrão (estática)</button>
+                            <button type="button" class="class-button play__options__item" value="absolute">Absoluta</button>
                             <button type="button" class="class-button play__options__item" value="fixed">Fixa</button>
                             <button type="button" class="class-button play__options__item" value="sticky">Sticky</button>
                         </div>
@@ -489,20 +490,14 @@
                     </button>
                     <div class="part__content">
                         <p>
-                        Por o editor não adicionar ou até um bug um elemento pode estar vazio. É sempre bom prever esses casos. 
+                            O editor pode não adicionar um conteudo, uma falha no carregamento ou um elemento pode estar vazio. É sempre bom prever esses casos. 
                         </p>
-                        <p>
-                            Só remover o elemento, com margem.
-                        </p>
-                        <p>
-                            Manter o espaço relativo a altura e largura do elemento.
-                        </p>
-                        <p>
-                            Ter um espaçamento diferente entre o elemento anterior e o próximo (normalmente o mesmo que uma altura mínima)
-                        </p>
-                        <p>
-                            Um elemento para quando estiver vazio (imagem place holder ou texto genérico)
-                        </p>
+                        <ul>
+                            <li>Só remover o elemento, com margem.</li>
+                            <li>Manter o espaço relativo a altura e largura do elemento.</li>
+                            <li>Ter um espaçamento diferente entre o elemento anterior e o próximo (normalmente o mesmo que uma altura mínima).</li>
+                            <li>Um elemento para quando estiver vazio (imagem place holder ou texto genérico).</li>
+                        </ul>
                         <img src="assets/img/blocoEspaço.png" title="Tipos de resultados sem uma parte do elemento" style="width: 500px;">
                     </div>
                 </div>
@@ -575,12 +570,12 @@
                         <p>
                             Exemplo: Um carrossel que contém título, parágrafo e botão (nessa ordem). Se for limitado somente a altura &nbsp;geral um texto grande resultará na perda do botão, Logo deverá ser definido uma altura para o título e parágrafo e se for o caso sempre ser visível parte parágrafo um limite de linhas para o título e para o parágrafo.
                         </p>
-                        <div class="title-play"><h3>Teste como a variação pode afetar o conteudo pa página</h3></div>
+                        <div class="title-play"><h3>Teste como a variação pode afetar o conteúdo da página</h3></div>
                         <div class="play play-single" id="p-carousel">
                             <div class="play__options">
                                 <button type="button" class="class-button play__options__item active"  value="empty">Sem limite de altura</button>
-                                <button type="button" class="class-button play__options__item " value="carousel-max-w">Com altura maxima do conteudo</button>
-                                <button type="button" class="class-button play__options__item " value="carousel-min-w">Com altura minima do conteudo</button>
+                                <button type="button" class="class-button play__options__item " value="carousel-max-w">Com altura máxima do conteúdo</button>
+                                <button type="button" class="class-button play__options__item " value="carousel-min-w">Com altura mínima do conteúdo</button>
                                 <button type="button" class="class-button play__options__item " value="carousel-fix">Com altura fixa</button>
                             </div>
                             <div class="play__show">
@@ -637,10 +632,10 @@
                             Sempre definir comportamentos para situações de limite, você pode exemplificar a situação com um grande texto e texto nenhum ou deixar um comentário com as especificações.
                         </p>
                         <p>
-                            Sugestão dar preferencia a textos grandes no mockup, além de te servir como alerta em como o elemento vai se comportar, muitas vezes o texto máximo já oferece informação suficiente pro desenvolvedor.
+                            Sugestão dar preferência a textos grandes no mockup, além de te servir como alerta em como o elemento vai se comportar, muitas vezes o texto máximo já oferece informação suficiente pro desenvolvedor.
                         </p>
                         <p>
-                            O editor do site pode colocar um texto grande demais eu texto nenhum, e acontece com frequencia.
+                            O editor do site pode colocar um texto grande demais eu texto nenhum, e acontece com frequência.
                         </p>
                     
                         <p>
@@ -732,7 +727,7 @@
                                 Link
                             </li>
                             <li>
-                                Lista com marcadores ou enumerada
+                                Lista com marcadores ou  numerada
                             </li>
                             <li>
                                 Imagens (podendo conter descrição)
@@ -768,10 +763,10 @@
                             , assim o espaço entre parágrafo seguido de uma lista será definido pelo parágrafo, mas também pode ser feito a partir da superior (se for coerente para o seu layout, mas mais incomum).
                         </p>
                         <p>
-                            Alguns elementos podem ter margem superior (títulos normalmente pedem um espaçamento superior maior que o padrão do texto), caso um elemento no texto tenha uma margem inferior seja seguido por um de margem superior prevalecerá a maior margem (exemplo um parágrafo com margem inferior 20 seguido de um titulo com margem superior 40, terá um espaçamento de 40 entre os elementos). Atenção esse tipo de margem funciona bem dentro do texto mas não em elementos complexos.
+                            Alguns elementos podem ter margem superior (títulos normalmente pedem um espaçamento superior maior que o padrão do texto), caso um elemento no texto tenha uma margem inferior seja seguido por um de margem superior prevalecerá a maior margem (exemplo um parágrafo com margem inferior 20 seguido de um titulo com margem superior 40, terá um espaçamento de 40 entre os elementos). Atenção: esse tipo de margem funciona bem dentro do texto mas não em elementos complexos.
                         </p>
                         <p>
-                            Logo depois de definir todas as margens inferiores, você também pode atribuir uma margem superior para elementos que necessitam de um espaçamento maior (titulos, imagens, citações).
+                            Logo depois de definir todas as margens inferiores, você também pode atribuir uma margem superior para elementos que necessitam de um espaçamento maior (títulos, imagens, citações).
                         </p>
                         <p>
                             Você também pode definir espaçamentos específicos entre 2 elementos (parágrafo seguido lista, título seguido de imagem), mas é ideal definir a margem padrão para evitar que algo fique com o espaçamento errado.
@@ -782,12 +777,12 @@
                 <div class="play play-multiple" id="p-text">
                     <div class="play__options">
                         <div class="play__options__item">
-                            Margem Titulo
+                            Margem Títulos
                             <button type="button" class="class-button btn btn-top" value="p-text-t-t">a cima</button>
                             <button type="button" class="class-button btn btn-bottom" value="p-text-t-b">a baixo</button>
                         </div>
                         <div class="play__options__item">
-                            Margem Paragrafo
+                            Margem Parágrafo
                             <button type="button" class="class-button btn btn-top" value="p-text-p-t">a cima</button>
                             <button type="button" class="class-button btn btn-bottom" value="p-text-p-b">a baixo</button>
                         </div>
@@ -892,7 +887,7 @@
                             Se a imagem for muito grande pode quebrar o layout.
                         </p>
                         <p>
-                            Em caso de de combinação com outro mecanismo (cortar, conter, esticar) a imagem pode ter um lado(vertical ou horizontal) muito maior que o outro ficando ilegível ou grande demais.
+                            Em caso de combinação com outro mecanismo (cortar, conter, esticar) a imagem pode ter um lado(vertical ou horizontal) muito maior que o outro ficando ilegível ou grande demais.
                         </p>
                         <h4 id="cortar">
                             Cortar
@@ -910,19 +905,21 @@
                             Conter
                         </h4>
                         <p>
-                            Ideal para icones
+                            Ideal para ícones.
                         </p>
                         <p>
-                                Tamanho máximo/mínimo
+                            Tamanho máximo/mínimo, 
                         </p>
                         <p>
-                                Alinhamento
+                            Opções de alinhamento
                         </p>
                         <h4 id="esticar">
                             Esticar
                         </h4>
+                        <p>Ocupa toda a largura e ou altura, quando menor que o espaço.</p>
                         <p>
-                            Principalmente em elementos relacionados a largura da tela e com altura automática ou proporcional a largura, se atentar ao tamanho da imagem quando a largura é muito grande &nbsp;a imagem pode ficar desproporcional a tela.
+                            Em elementos relacionados a largura da tela e com altura automática, se atentar ao tamanho da imagem quando a largura é muito grande &nbsp;a imagem pode ficar desproporcional a tela.
+                            Quando não é com conter ou altura automatica pode distorcer imagens.
                         </p>
                     </div>
                 </div>
@@ -932,19 +929,19 @@
 
                 <div class="play play-multiple" id="p-image">
                     <div class="play__options">
-                        <button type="button" class="class-button play__options__item" value="assets/img-stretch-h">Esticar vertical</button>
-                        <button type="button" class="class-button play__options__item" value="assets/img-stretch-w">Esticar horizontalmente</button>
-                        <button type="button" class="class-button play__options__item" value="assets/img-contain-h">Conter verticalmente</button>
-                        <button type="button" class="class-button play__options__item" value="assets/img-contain-w">Conter horizontalmente</button>
+                        <button type="button" class="class-button play__options__item" value="img-stretch-h">Esticar vertical</button>
+                        <button type="button" class="class-button play__options__item" value="img-stretch-w">Esticar horizontalmente</button>
+                        <button type="button" class="class-button play__options__item" value="img-contain-h">Conter verticalmente</button>
+                        <button type="button" class="class-button play__options__item" value="img-contain-w">Conter horizontalmente</button>
                     </div>
                     <div class="play__show img-shift">
                         <div class="play__show__button">
-                            <button type="button" class="assets/img-shifter" id="sw1">Trocar</button>
+                            <button type="button" class="img-shifter" id="sw1">Trocar</button>
                         </div>
                         <div class="play__show__content">
                             <div class="color-1 box-1x1 box-img">
                                 <!-- <div class="box-img__contain"> -->
-                                    <img class="assets/img-shifted" src="https://via.placeholder.com/500x90.png" alt="">
+                                    <img class="img-shifted" src="https://via.placeholder.com/500x90.png" alt="">
                                 <!-- </div> -->
                             </div>
                         </div>
@@ -956,18 +953,18 @@
                 <div class="play play-single" id="p-image-1x1">
                     <div class="play__options">
                         <button type="button" class="class-button play__options__item active" value="empty">Esticar</button>
-                        <button type="button" class="class-button play__options__item" value="assets/img-contain">Conter</button>
-                        <button type="button" class="class-button play__options__item" value="assets/img-scale">Ajustar (conter se maior)</button>
-                        <button type="button" class="class-button play__options__item" value="assets/img-cover">Cortar</button>
+                        <button type="button" class="class-button play__options__item" value="img-contain">Conter</button>
+                        <button type="button" class="class-button play__options__item" value="img-scale">Ajustar (conter se maior)</button>
+                        <button type="button" class="class-button play__options__item" value="img-cover">Cortar</button>
                     </div>
                     <div class="play__show img-shift">
                         <div class="play__show__button">
-                            <button type="button" class="assets/img-shifter" id="sw2">Trocar</button>
+                            <button type="button" class="img-shifter" id="sw2">Trocar</button>
                         </div>
                         <div class="play__show__content">
                             <div class="color-1 box-1x1 box-img">
                                 <!-- <div class="box-img__contain"> -->
-                                    <img class="assets/img-shifted" src="https://via.placeholder.com/500x90.png" alt="">
+                                    <img class="img-shifted" src="https://via.placeholder.com/500x90.png" alt="">
                                 <!-- </div> -->
                             </div>
                         </div>
