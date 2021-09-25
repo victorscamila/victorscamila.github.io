@@ -165,6 +165,7 @@
 
 #p-image .play__show__content {
   max-height: 320px;
+  overflow-y: auto;
 }
 
 #p-image .box-1x1 {

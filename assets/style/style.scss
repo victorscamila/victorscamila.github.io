@@ -56,6 +56,13 @@ button, .btn {
     text-decoration: none;
     cursor: pointer;
 }
+.img-shifter{
+    border-color: #000;
+    background-color: #fff;
+    &:hover {
+        background-color: rgb(241, 241, 241);
+    }
+}
 .btn--ex {
     background-color: $exemple;
     border-radius: 30px;

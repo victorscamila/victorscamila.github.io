@@ -143,6 +143,7 @@ $color-dark-3: darkred;
 #p-image {
     .play__show__content {
         max-height: 320px;
+        overflow-y: auto;
     }
     .box-1x1 {
         height: auto;
