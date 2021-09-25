@@ -140,6 +140,15 @@ $color-dark-3: darkred;
         }
     }
 }
+#p-image {
+    .play__show__content {
+        max-height: 320px;
+    }
+    .box-1x1 {
+        height: auto;
+        min-height: 300px;
+    }
+}
 #p-image-1x1 img {
     width: 100%;
     height: 100%;

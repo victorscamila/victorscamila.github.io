@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded',function(){
         shifter[0] && shifter[0].addEventListener('click',function(){
             shifted[0] && (shifted[0].src = srcs[counter])
             counter++
-            if (counter >= 13){
+            if (counter >= 12){
                 counter = 0
             }
         })
