@@ -23,6 +23,9 @@ body {
 img {
     max-width: 100%;
 }
+.play img {
+    max-width: unset;
+}
 p {
     max-width: 750px;
 }
