@@ -81,15 +81,20 @@
 }
 
 .img-contain-h img {
-  max-height: 100%;
+  max-height: 300px;
+}
+
+.img-contain-h .box-1x1 {
+  max-height: 300px;
+}
+
+.img-stretch-h img {
+  min-height: 300px;
+  max-width: unset;
 }
 
 .img-contain-w img {
   max-width: 100%;
-}
-
-.img-stretch-h img {
-  min-height: 100%;
 }
 
 .img-stretch-w img {

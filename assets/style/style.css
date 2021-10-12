@@ -315,6 +315,24 @@ button, .btn {
   }
 }
 
+.part h3:target:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 10px solid transparent;
+  left: -5px;
+  opacity: 0;
+  top: 50%;
+  -webkit-animation: flash 2s;
+          animation: flash 2s;
+}
+
+@media (max-width: 767px) {
+  .part h3:target:before {
+    left: -2px;
+  }
+}
+
 .part *:first-child {
   margin-top: 0;
 }
@@ -373,8 +391,12 @@ button, .btn {
   margin-bottom: 35px;
 }
 
-.part__head:not(.open) + .part__content .part:target:before {
+.part__head:not(.open) + .part__content .part:target:before, .part__head:not(.open) + .part__content h3:target:before {
   border-bottom-color: #000;
+}
+
+.part__head:not(.open) + .part__content h3:target:before {
+  margin-top: 0;
 }
 
 .part__content {

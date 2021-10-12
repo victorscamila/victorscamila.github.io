@@ -73,14 +73,20 @@ $color-dark-3: darkred;
     }
 }
 .img {
-    &-contain-h img {
-        max-height: 100%;
+    &-contain-h {
+        img {
+        max-height: 300px;
+        }
+        .box-1x1 {
+            max-height: 300px;
+        }
+    }
+    &-stretch-h img {
+        min-height: 300px;
+        max-width: unset;
     }
     &-contain-w img {
         max-width: 100%;
-    }
-    &-stretch-h img {
-        min-height: 100%;
     }
     &-stretch-w img {
         min-width: 100%;
